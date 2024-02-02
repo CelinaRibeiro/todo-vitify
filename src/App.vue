@@ -1,6 +1,10 @@
 <template>
   <v-app theme="dark">
-    <v-app-bar flat class="border-b">
+    <v-navigation-drawer v-model="isDrawerOpen">
+      menu
+    </v-navigation-drawer>
+
+    <v-app-bar flat class="border-b" @click="isDrawerOpen = !isDrawerOpen">
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
       <v-app-bar-title>Meu App</v-app-bar-title>
      
@@ -118,5 +122,7 @@
 </template>
 
 <script setup>
-  //
+import { ref } from "vue";
+
+  const isDrawerOpen = ref(false);
 </script>
