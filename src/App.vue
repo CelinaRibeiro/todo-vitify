@@ -1,5 +1,5 @@
 <template>
-  <v-app theme="dark">
+  <v-app theme="">
     <v-navigation-drawer v-model="isDrawerOpen">
      <v-list>
       <v-list-subheader>Menu</v-list-subheader>
@@ -30,14 +30,30 @@
             <v-icon icon="mdi-bell-outline"></v-icon>
           </v-badge>
         </v-btn>
-        <v-avatar>
-          <v-img
-          src="https://img.freepik.com/fotos-premium/avatar-mulher-geek-furiosa_949597-34.jpg?w=740"
-          cover
-          ></v-img>
-        </v-avatar>
+
+        <v-menu>
+          <template #activator="{ props }">
+            <v-avatar v-bind="props"> 
+              <v-img
+              src="https://img.freepik.com/fotos-premium/avatar-mulher-geek-furiosa_949597-34.jpg?w=740"
+              cover
+              ></v-img>
+            </v-avatar>
+          </template>
+          
+          <v-card min-width="200px">
+            <v-list nav density="compact" :lines="false">
+              <v-list-item prepend-icon="mdi-account-outline">
+                <v-list-item-title>Meu perfil</v-list-item-title>
+              </v-list-item>
+              
+              <v-list-item prepend-icon="mdi-heart-outline">
+                <v-list-item-title>Favoritos</v-list-item-title>
+              </v-list-item>
+            </v-list>
+          </v-card>
+        </v-menu>
       </template>
-      
     </v-app-bar>
     
     <v-main>
