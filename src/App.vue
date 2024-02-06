@@ -46,7 +46,7 @@
               <v-list-item prepend-icon="mdi-account-outline">
                 <v-list-item-title>Meu perfil</v-list-item-title>
               </v-list-item>
-              
+
               <v-list-item prepend-icon="mdi-heart-outline">
                 <v-list-item-title>Favoritos</v-list-item-title>
               </v-list-item>
@@ -59,6 +59,41 @@
     <v-main>
       <v-container>
         <h1>Dashboard</h1>
+
+        <v-table
+          fixed-header
+          height="300px"
+        >
+        <thead>
+          <tr>
+            <th class="text-left">Nome</th>
+            <th class="text-left">E-mail</th>
+            <th class="text-left">Perfil</th>
+            <th class="text-left">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fulano</td>
+            <td>fulano@gmail.com</td>
+            <td>Admin</td>
+            <td><v-btn icon="mdi-pencil" color="info" variant="tonal"></v-btn></td>
+          </tr>
+          <tr>
+            <td>Ciclano</td>
+            <td>ciclano@gmail.com</td>
+            <td>Gerente</td>
+            <td><v-btn icon="mdi-pencil" color="info" variant="tonal"></v-btn></td>
+          </tr>
+          <tr>
+            <td>Beltrano</td>
+            <td>beltrano@gmail.com</td>
+            <td>Convidado</td>
+            <td><v-btn icon="mdi-pencil" color="info" variant="tonal"></v-btn></td>
+          </tr>
+        </tbody>
+        </v-table>
+
         <v-row>
           <v-col cols="12" sm="6" md="4">
             <v-card flat class="border">
