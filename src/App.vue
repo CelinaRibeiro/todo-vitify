@@ -88,9 +88,31 @@
                 width="600px"
                 >
                 <v-card>
+                  <v-card-title>Adicionar usuário</v-card-title>
                   <v-card-text>
-                    ok ok
+                    <v-row>
+                      <v-col>
+                        <v-text-field label="Nome" variant="outlined"></v-text-field>
+                      </v-col>
+
+                      <v-col>
+                        <v-text-field label="E-mail" variant="outlined"></v-text-field>
+                      </v-col>
+                    </v-row>
+
+                   <v-select
+                      label="Perfil"  
+                      :items="['Admin', 'Gerente', 'Visitante']"
+                      variant="outlined"
+                    >
+                    </v-select>
                   </v-card-text>
+
+                  <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn variant="text" @click="isDialogOpen = false">Cancelar</v-btn>
+                    <v-btn color="success" variant="tonal">Salvar</v-btn>
+                  </v-card-actions>
                 </v-card>
               </v-dialog>
             </v-card-title>
