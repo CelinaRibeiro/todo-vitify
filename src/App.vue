@@ -60,6 +60,44 @@
       <v-container>
         <h1>Dashboard</h1>
 
+        <!-- <v-card flat class="border mb-4">
+          <div class="d-flex justify-space-between">
+            <v-card-title>Últimos usuários</v-card-title>
+            <v-card-title>
+              <v-dialog width="600px">
+                <template #activator="{ props }">
+                  <v-btn v-bind="props" variant="tonal" size="small">Adicionar usuário</v-btn>
+                </template>
+
+                <v-card>
+                  <v-card-text>ok ok</v-card-text>
+                </v-card>
+              </v-dialog>
+            </v-card-title>
+          </div>
+        </v-card> -->
+
+        <v-card flat class="border mb-4">
+          <div class="d-flex justify-space-between">
+            <v-card-title>Últimos usuários</v-card-title>
+            <v-card-title>
+              <v-btn @click="isDialogOpen = true" variant="tonal" size="small">Adicionar usuário</v-btn>
+              
+              <v-dialog 
+                v-model="isDialogOpen"
+                width="600px"
+                >
+                <v-card>
+                  <v-card-text>
+                    ok ok
+                  </v-card-text>
+                </v-card>
+              </v-dialog>
+            </v-card-title>
+          </div>
+        </v-card>
+        
+
         <v-table
           fixed-header
           height="300px"
@@ -192,4 +230,5 @@
 import { ref } from "vue";
 
   const isDrawerOpen = ref(false);
+  const isDialogOpen = ref(false);
 </script>
