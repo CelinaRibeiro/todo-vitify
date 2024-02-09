@@ -130,29 +130,35 @@
         >
         <thead>
           <tr>
-            <th class="text-left">Nome</th>
-            <th class="text-left">E-mail</th>
-            <th class="text-left">Perfil</th>
-            <th class="text-left">Ações</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Perfil</th>
+            <th>Ações</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>Fulano</td>
             <td>fulano@gmail.com</td>
-            <td>Admin</td>
+            <td>
+              <v-chip color="success" variant="outlined" size="small">Admin</v-chip>
+            </td>
             <td><v-btn icon="mdi-pencil" color="info" variant="tonal"></v-btn></td>
           </tr>
           <tr>
             <td>Ciclano</td>
             <td>ciclano@gmail.com</td>
-            <td>Gerente</td>
+            <td>
+              <v-chip color="info" variant="outlined" size="small">Gerente</v-chip>
+            </td>
             <td><v-btn icon="mdi-pencil" color="info" variant="tonal"></v-btn></td>
           </tr>
           <tr>
             <td>Beltrano</td>
             <td>beltrano@gmail.com</td>
-            <td>Convidado</td>
+            <td>
+              <v-chip variant="outlined" size="small">Convidado</v-chip>
+            </td>
             <td><v-btn icon="mdi-pencil" color="info" variant="tonal"></v-btn></td>
           </tr>
         </tbody>
