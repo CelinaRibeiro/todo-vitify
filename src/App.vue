@@ -96,7 +96,11 @@
                       </v-col>
 
                       <v-col>
-                        <v-text-field label="E-mail" variant="outlined"></v-text-field>
+                        <v-text-field 
+                          label="E-mail" 
+                          variant="outlined"
+                          :rules="emailRules"
+                          ></v-text-field>
                       </v-col>
                     </v-row>
 
@@ -253,4 +257,19 @@ import { ref } from "vue";
 
   const isDrawerOpen = ref(false);
   const isDialogOpen = ref(false);
+
+  const emailRules = [
+    value => {
+      if(value) {
+        return true;
+      }
+      return 'O campo e-mail é obrigatório.';
+    }, 
+    value => {
+      if(value.includes('@')) {
+        return true;
+      }
+      return 'E-mail inválido.';
+    }
+  ];
 </script>
